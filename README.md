@@ -92,7 +92,29 @@ The source records transactions rather than actual inventory balances, stockouts
 - `01_prepare_data.py` - data ingestion and cleaning
 - `02_forecast_inventory.py` - model validation, forecasting, and inventory calculations
 - `monica_hall_supply_chain_analytics_portfolio.xlsx` - dashboard workbook
-- `project_data/` - analysis and dashboard-ready output tables
-- `project_charts/` - portfolio visuals
+- `monica_hall_retail_demand_inventory_dashboard.pbix` - Power BI dashboard
 - `monica_hall_supply_chain_analytics_case_study.pdf` - recruiter-facing case study
+
+## How to run
+
+1. Download the UCI Online Retail II workbook from the dataset link above.
+2. Place the workbook in the project directory and update the input path in `01_prepare_data.py` if needed.
+3. Install the Python dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the scripts in order:
+
+   ```bash
+   python 01_prepare_data.py
+   python 02_forecast_inventory.py
+   ```
+
+The raw dataset is not stored in this repository because of its size. The source link and all scenario assumptions are documented above.
+
+## Portfolio note
+
+This is an independent portfolio project created to demonstrate demand forecasting, inventory-policy design, dashboarding, and business communication. Safety-stock and reorder-point values are analytical scenarios, not policies observed from the retailer.
 
